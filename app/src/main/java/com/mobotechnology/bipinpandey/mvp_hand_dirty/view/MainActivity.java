@@ -18,8 +18,10 @@ import com.mobotechnology.bipinpandey.mvp_hand_dirty.presenter.MainActivityPrese
 public class MainActivity extends AppCompatActivity implements Contract.View {
 
     private MainActivityPresenterImpl presenter;
-    private TextView myTextView;
+    private TextView titleTextView;
     private ProgressBar progressBar;
+    private EditText userName;
+    private EditText email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +30,25 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        setPresenter();
+
+        initViews();
+        setupProgressBar();
+        initListeners();
+    }
+
+    private void setPresenter() {
         presenter = new MainActivityPresenterImpl(this);
+    }
 
-        myTextView = findViewById(R.id.myTextView);
-        EditText userName = findViewById(R.id.username);
-        EditText email = findViewById(R.id.email);
-        initProgressBar();
+    private void initViews() {
+        titleTextView = findViewById(R.id.title);
+        userName = findViewById(R.id.username);
+        email = findViewById(R.id.email);
+        progressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleSmall);
+    }
 
-
+    private void initListeners() {
         userName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -67,11 +80,9 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
                 hideProgressBar();
             }
         });
-
     }
 
-    private void initProgressBar() {
-        progressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleSmall);
+    private void setupProgressBar() {
         progressBar.setIndeterminate(true);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(Resources.getSystem().getDisplayMetrics().widthPixels,
                 250);
@@ -82,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
 
     @Override
     public void updateUserInfoTextView(String info) {
-        myTextView.setText(info);
+        titleTextView.setText(info);
     }
 
     @Override

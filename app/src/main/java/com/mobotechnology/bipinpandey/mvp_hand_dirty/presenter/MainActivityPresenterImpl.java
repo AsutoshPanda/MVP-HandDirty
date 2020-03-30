@@ -1,30 +1,30 @@
 package com.mobotechnology.bipinpandey.mvp_hand_dirty.presenter;
 
 import com.mobotechnology.bipinpandey.mvp_hand_dirty.Contract;
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.model.User;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.model.UserModel;
 
 
 public class MainActivityPresenterImpl implements Contract.Prersenter{
 
-    private User user;
-    private Contract.View callback;
+    private UserModel userModel;
+    private Contract.View viewCallback;
 
     public MainActivityPresenterImpl(Contract.View view) {
-        this.user = new User();
-        this.callback = view;
+        this.userModel = new UserModel();
+        this.viewCallback = view;
     }
 
     @Override
     public void updateFullName(String fullName){
-        user.setFullName(fullName);
-        callback.updateUserInfoTextView(user.toString());
+        userModel.setFullName(fullName);
+        viewCallback.updateUserInfoTextView(userModel.toString());
 
     }
 
     @Override
     public void updateEmail(String email){
-        user.setEmail(email);
-        callback.updateUserInfoTextView(user.toString());
+        userModel.setEmail(email);
+        viewCallback.updateUserInfoTextView(userModel.toString());
 
     }
 }

@@ -1,14 +1,14 @@
 package com.mobotechnology.bipinpandey.mvp_hand_dirty.model;
 
 
-public class User {
+public class UserModel {
 
     private String fullName = "", email = "";
 
-    public User() {
+    public UserModel() {
     }
 
-    public User(String fullName, String email) {
+    public UserModel(String fullName, String email) {
         this.fullName = fullName;
         this.email = email;
     }
