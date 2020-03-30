@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
     private MainActivityPresenterImpl presenter;
     private TextView titleTextView;
     private ProgressBar progressBar;
-    private EditText userName;
-    private EditText email;
+    private EditText userNameEditText;
+    private EditText emailEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
 
     private void initViews() {
         titleTextView = findViewById(R.id.title);
-        userName = findViewById(R.id.username);
-        email = findViewById(R.id.email);
+        userNameEditText = findViewById(R.id.username);
+        emailEditText = findViewById(R.id.email);
         progressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleSmall);
     }
 
     private void initListeners() {
-        userName.addTextChangedListener(new TextWatcher() {
+        userNameEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
             }
         });
 
-        email.addTextChangedListener(new TextWatcher() {
+        emailEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
