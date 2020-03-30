@@ -4,7 +4,7 @@ import com.mobotechnology.bipinpandey.mvp_hand_dirty.Contract;
 import com.mobotechnology.bipinpandey.mvp_hand_dirty.model.UserModel;
 
 
-public class MainActivityPresenterImpl implements Contract.Prersenter{
+public class MainActivityPresenterImpl implements Contract.Presenter {
 
     private UserModel userModel;
     private Contract.View viewCallback;

@@ -2,7 +2,7 @@ package com.mobotechnology.bipinpandey.mvp_hand_dirty;
 
 public class Contract {
 
-    public interface Prersenter{
+    public interface Presenter {
         void updateFullName(String fullName);
         void updateEmail(String email);
     }
