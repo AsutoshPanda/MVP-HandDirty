@@ -1,4 +1,4 @@
-package com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.model;
+package com.mobotechnology.bipinpandey.mvp_hand_dirty.model;
 
 
 public class User {

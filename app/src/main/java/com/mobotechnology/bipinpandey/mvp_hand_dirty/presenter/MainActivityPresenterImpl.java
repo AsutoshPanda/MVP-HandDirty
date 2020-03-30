@@ -1,7 +1,7 @@
-package com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.presenter;
+package com.mobotechnology.bipinpandey.mvp_hand_dirty.presenter;
 
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.Contract;
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.model.User;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.Contract;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.model.User;
 
 
 public class MainActivityPresenterImpl implements Contract.Prersenter{

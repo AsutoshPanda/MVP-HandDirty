@@ -1,4 +1,4 @@
-package com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.view;
+package com.mobotechnology.bipinpandey.mvp_hand_dirty.view;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mobotechnology.bipinpandey.mvp_hand_dirty.R;
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.Contract;
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.presenter.MainActivityPresenterImpl;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.Contract;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.presenter.MainActivityPresenterImpl;
 
 public class MainActivity extends AppCompatActivity implements Contract.View {
 

@@ -1,4 +1,4 @@
-package com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity;
+package com.mobotechnology.bipinpandey.mvp_hand_dirty;
 
 public class Contract {
 
