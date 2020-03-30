@@ -6,18 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mobotechnology.bipinpandey.mvp_hand_dirty.R;
-import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.presenter.MainActivityPresenter;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.Contract;
+import com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.presenter.MainActivityPresenterImpl;
 
-public class MainActivity extends AppCompatActivity implements MainActivityPresenter.View {
+public class MainActivity extends AppCompatActivity implements Contract.View {
 
-    private MainActivityPresenter presenter;
+    private MainActivityPresenterImpl presenter;
     private TextView myTextView;
     private ProgressBar progressBar;
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrese
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        presenter = new MainActivityPresenter(this);
+        presenter = new MainActivityPresenterImpl(this);
 
         myTextView = findViewById(R.id.myTextView);
         EditText userName = findViewById(R.id.username);
@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrese
 
     @Override
     public void showProgressBar() {
-        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(android.view.View.VISIBLE);
     }
 
     @Override
     public void hideProgressBar() {
-        progressBar.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(android.view.View.INVISIBLE);
     }
 }

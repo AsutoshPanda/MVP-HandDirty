@@ -1,8 +1,5 @@
 package com.mobotechnology.bipinpandey.mvp_hand_dirty.main_activity.model;
 
-/**
- * Created by bpn on 11/30/17.
- */
 
 public class User {
 
