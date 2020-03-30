@@ -3,6 +3,12 @@ package com.mobotechnology.bipinpandey.mvp_hand_dirty.model;
 
 public class UserModel {
 
+    // Model handles the data
+
+    // Can make API calls through here
+    // Can do DB queries through here as well
+    // now im just setting the data in variables for simplicity
+
     private String fullName = "", email = "";
 
     public UserModel() {
